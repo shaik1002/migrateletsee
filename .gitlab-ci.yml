@@ -1,15 +1,15 @@
-image: gradle:6.9
- 
 stages:
   - build
   - test
- 
-build:
+
+build_job:
   stage: build
   script:
+    - chmod +x ./gradlew
     - ./gradlew build
- 
-test:
+
+test_job:
   stage: test
   script:
+    - chmod +x ./gradlew
     - ./gradlew test
